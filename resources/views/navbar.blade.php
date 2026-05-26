@@ -7,7 +7,7 @@
                 <img
                     src="{{ asset('logo/logo-isfest.png') }}"
                     alt="ISFEST 2026 Logo"
-                    class="w-full h-full object-contain object-left"
+                    class="w-full h-full object-contain object-left drop-shadow-[0_0_8px_rgba(255,236,31,0.3)]"
                 />
             </div>
         </a>
@@ -15,23 +15,25 @@
         {{-- Desktop Menu --}}
         <div class="hidden md:flex items-center gap-8">
             <a href="{{ route('home') }}"    
-               class="text-sm font-semibold tracking-wide transition-colors {{ request()->routeIs('home') ? 'text-[#ffec1f]' : 'text-slate-300 hover:text-[#ffec1f]' }}">
+               class="text-xs font-bold uppercase tracking-widest transition-colors {{ request()->routeIs('home') ? 'text-[#ffec1f] drop-shadow-[0_0_5px_rgba(255,236,31,0.5)]' : 'text-slate-300 hover:text-[#ffec1f]' }}">
                Home
             </a>
             <a href="{{ route('tentang') }}" 
-               class="text-sm font-semibold tracking-wide transition-colors {{ request()->routeIs('tentang') ? 'text-[#ffec1f]' : 'text-slate-300 hover:text-[#ffec1f]' }}">
+               class="text-xs font-bold uppercase tracking-widest transition-colors {{ request()->routeIs('tentang') ? 'text-[#ffec1f] drop-shadow-[0_0_5px_rgba(255,236,31,0.5)]' : 'text-slate-300 hover:text-[#ffec1f]' }}">
                Tentang
             </a>
             <a href="{{ route('lomba') }}"   
-               class="text-sm font-semibold tracking-wide transition-colors {{ request()->routeIs('lomba') ? 'text-[#ffec1f]' : 'text-slate-300 hover:text-[#ffec1f]' }}">
+               class="text-xs font-bold uppercase tracking-widest transition-colors {{ request()->routeIs('lomba') ? 'text-[#ffec1f] drop-shadow-[0_0_5px_rgba(255,236,31,0.5)]' : 'text-slate-300 hover:text-[#ffec1f]' }}">
                Lomba
             </a>
             <a href="{{ route('divisi') }}"  
-               class="text-sm font-semibold tracking-wide transition-colors {{ request()->routeIs('divisi') ? 'text-[#ffec1f]' : 'text-slate-300 hover:text-[#ffec1f]' }}">
+               class="text-xs font-bold uppercase tracking-widest transition-colors {{ request()->routeIs('divisi') ? 'text-[#ffec1f] drop-shadow-[0_0_5px_rgba(255,236,31,0.5)]' : 'text-slate-300 hover:text-[#ffec1f]' }}">
                Divisi
             </a>
+            
+            {{-- Tombol disesuaikan dengan gaya "Masuki Arena" di Hero Section --}}
             <a href="{{ route('lomba') }}"
-               class="px-6 py-2.5 rounded-xl bg-[#f59e0b] hover:bg-[#d97706] text-slate-950 text-sm font-bold transition-all shadow-md transform hover:-translate-y-0.5 btn-glow">
+               class="px-8 py-3 rounded-full bg-amber-600 hover:bg-amber-500 text-slate-950 text-xs font-bold uppercase tracking-widest transition-all shadow-[0_0_15px_rgba(217,119,6,0.3)] transform hover:-translate-y-0.5">
               Daftar Sekarang
             </a>
         </div>
@@ -60,23 +62,23 @@
     >
         <div class="max-w-7xl mx-auto px-6 py-5 space-y-2 border-t border-slate-700/30">
             <a href="{{ route('home') }}"
-               class="block px-3 py-2 text-sm font-medium rounded-lg transition-all {{ request()->routeIs('home') ? 'text-[#ffec1f] bg-slate-800/20' : 'text-slate-300 hover:text-[#ffec1f] hover:bg-slate-800/40' }}">
+               class="block px-4 py-3 text-xs font-bold uppercase tracking-widest rounded-lg transition-all {{ request()->routeIs('home') ? 'text-[#ffec1f] bg-slate-800/30 border border-[#ffec1f]/20' : 'text-slate-300 hover:text-[#ffec1f] hover:bg-slate-800/40' }}">
                Home
             </a>
             <a href="{{ route('tentang') }}"
-               class="block px-3 py-2 text-sm font-medium rounded-lg transition-all {{ request()->routeIs('tentang') ? 'text-[#ffec1f] bg-slate-800/20' : 'text-slate-300 hover:text-[#ffec1f] hover:bg-slate-800/40' }}">
+               class="block px-4 py-3 text-xs font-bold uppercase tracking-widest rounded-lg transition-all {{ request()->routeIs('tentang') ? 'text-[#ffec1f] bg-slate-800/30 border border-[#ffec1f]/20' : 'text-slate-300 hover:text-[#ffec1f] hover:bg-slate-800/40' }}">
                Tentang
             </a>
             <a href="{{ route('lomba') }}"
-               class="block px-3 py-2 text-sm font-medium rounded-lg transition-all {{ request()->routeIs('lomba') ? 'text-[#ffec1f] bg-slate-800/20' : 'text-slate-300 hover:text-[#ffec1f] hover:bg-slate-800/40' }}">
+               class="block px-4 py-3 text-xs font-bold uppercase tracking-widest rounded-lg transition-all {{ request()->routeIs('lomba') ? 'text-[#ffec1f] bg-slate-800/30 border border-[#ffec1f]/20' : 'text-slate-300 hover:text-[#ffec1f] hover:bg-slate-800/40' }}">
                Lomba
             </a>
             <a href="{{ route('divisi') }}"
-               class="block px-3 py-2 text-sm font-medium rounded-lg transition-all {{ request()->routeIs('divisi') ? 'text-[#ffec1f] bg-slate-800/20' : 'text-slate-300 hover:text-[#ffec1f] hover:bg-slate-800/40' }}">
+               class="block px-4 py-3 text-xs font-bold uppercase tracking-widest rounded-lg transition-all {{ request()->routeIs('divisi') ? 'text-[#ffec1f] bg-slate-800/30 border border-[#ffec1f]/20' : 'text-slate-300 hover:text-[#ffec1f] hover:bg-slate-800/40' }}">
                Divisi
             </a>
             <a href="{{ route('lomba') }}"
-               class="block text-center px-4 py-3 mt-4 rounded-xl bg-[#f59e0b] hover:bg-[#d97706] text-slate-950 font-bold text-sm transition-all shadow-md">
+               class="block text-center px-4 py-4 mt-4 rounded-full bg-amber-600 hover:bg-amber-500 text-slate-950 font-bold text-xs uppercase tracking-widest transition-all shadow-md shadow-amber-900/20">
                Daftar Sekarang
             </a>
         </div>
@@ -97,19 +99,15 @@
             isMenuOpen = !isMenuOpen;
             
             if (isMenuOpen) {
-                // Tampilkan Menu
                 mobileMenu.classList.remove('max-h-0', 'opacity-0');
                 mobileMenu.classList.add('max-h-96', 'opacity-100');
                 
-                // Ganti Ikon ke 'X'
                 iconOpen.classList.add('hidden');
                 iconClose.classList.remove('hidden');
             } else {
-                // Sembunyikan Menu
                 mobileMenu.classList.remove('max-h-96', 'opacity-100');
                 mobileMenu.classList.add('max-h-0', 'opacity-0');
                 
-                // Ganti Ikon ke 'Hamburger'
                 iconClose.classList.add('hidden');
                 iconOpen.classList.remove('hidden');
             }
